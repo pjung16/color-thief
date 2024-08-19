@@ -8,14 +8,15 @@ function createPixelArray(imgData, pixelCount, quality) {
         g = pixels[offset + 1];
         b = pixels[offset + 2];
         a = pixels[offset + 3];
+        pixelArray.push([r, g, b]);
 
-        // If pixel is mostly opaque and not white
-        if (typeof a === 'undefined' || a >= 125) {
-            pixelArray.push([r, g, b]);
-            // if (!(r > 250 && g > 250 && b > 250)) {
-            //     pixelArray.push([r, g, b]);
-            // }
-        }
+        // // If pixel is mostly opaque and not white
+        // if (typeof a === 'undefined' || a >= 125) {
+        //     pixelArray.push([r, g, b]);
+        //     // if (!(r > 250 && g > 250 && b > 250)) {
+        //     //     pixelArray.push([r, g, b]);
+        //     // }
+        // }
     }
     return pixelArray;
 }
